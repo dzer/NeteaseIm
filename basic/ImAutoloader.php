@@ -16,13 +16,14 @@ class ImAutoloader {
      * 
      * @return bool
      */
-    public static function register() {
-        if (function_exists('__autoload')) {
-            //避免冲突，显示注册__autoload
-            spl_autoload_register('__autoload');
-        }
-        return spl_autoload_register(array('ImAutoloader', 'load'));
-    }
+	public static function register() {
+		if (function_exists('__autoload')) {
+			//激活__autoload
+			spl_autoload_register('__autoload');
+		}
+		//避免冲突，显示注册到__autoload栈中
+		return spl_autoload_register(array('ImAutoloader', 'load'));
+	}
 
     /**
      * 自动加载类
