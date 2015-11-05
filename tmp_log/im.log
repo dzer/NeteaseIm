@@ -1,0 +1,273 @@
+[2015-11-05 14:46:29] header: 
+
+body: 
+Array
+(
+    [name] => me
+    [token] => 5a105e8b9d40e1329780d62ea2265d8a
+)
+
+response: 
+{"desc":"accid is empty","code":414}
+
+[2015-11-05 15:00:49] header: 
+Array
+(
+    [0] => Appkey: 361c0953d08afc85040a36b48061daf4
+    [1] => Nonce: qpbrh%*g1(i_u7t4#5~s
+    [2] => CurTime: 1446706849
+    [3] => CheckSum: e3251ef9f29fd1c47a83e28f031250da8df9d706
+    [4] => content-type: application/x-www-form-urlencoded; charset=UTF-8
+)
+
+body: 
+Array
+(
+    [name] => me
+    [token] => 5a105e8b9d40e1329780d62ea2265d8a
+)
+
+response: 
+{"desc":"accid is empty","code":414}
+
+[2015-11-05 15:04:11] header: 
+array (
+  0 => 'Appkey: 361c0953d08afc85040a36b48061daf4',
+  1 => 'Nonce: ~b&+_1tv8!s^walzmn6y',
+  2 => 'CurTime: 1446707050',
+  3 => 'CheckSum: 76b4b4a5cef0ee99cf569f89d27ba8846548c006',
+  4 => 'content-type: application/x-www-form-urlencoded; charset=UTF-8',
+)
+body: 
+array (
+  'name' => 'me',
+  'token' => '5a105e8b9d40e1329780d62ea2265d8a',
+)
+response: 
+'{"desc":"accid is empty","code":414}'
+
+[2015-11-05 15:10:50] header: 
+Array
+(
+    [0] => Appkey: 361c0953d08afc85040a36b48061daf4
+    [1] => Nonce: ncbk!fgh)1j6z$d(esv8
+    [2] => CurTime: 1446707450
+    [3] => CheckSum: fcf0160a822db3cd198ac3a5b9c9350184a459a5
+    [4] => content-type: application/x-www-form-urlencoded; charset=UTF-8
+)
+
+body: 
+Array
+(
+    [name] => me
+    [token] => 5a105e8b9d40e1329780d62ea2265d8a
+    [0] => test1
+)
+
+response: 
+{"desc":"accid is empty","code":414}
+
+[2015-11-05 15:11:55] header: 
+Array
+(
+    [0] => Appkey: 361c0953d08afc85040a36b48061daf4
+    [1] => Nonce: rjo1ch^mz_lefwvn9y~0
+    [2] => CurTime: 1446707515
+    [3] => CheckSum: 7a323982606f2000dc9faf98848ccb66121cf5d9
+    [4] => content-type: application/x-www-form-urlencoded; charset=UTF-8
+)
+
+body: 
+Array
+(
+    [name] => me
+    [token] => 5a105e8b9d40e1329780d62ea2265d8a
+    [accid] => test1
+)
+
+response: 
+{"code":200,"info":{"token":"5a105e8b9d40e1329780d62ea2265d8a","accid":"test1","name":"me"}}
+
+[2015-11-05 15:39:31] header: 
+Array
+(
+    [0] => Appkey: 361c0953d08afc85040a36b48061daf4
+    [1] => Nonce: wavs&e+jkoy3trf7gzc$
+    [2] => CurTime: 1446709171
+    [3] => CheckSum: 85108f28f4d22d4e6ab3e6bfa1b1d9c0541d3688
+    [4] => content-type: application/x-www-form-urlencoded; charset=UTF-8
+)
+
+body: 
+Array
+(
+    [name] => me
+    [token] => 5a105e8b9d40e1329780d62ea2265d8a
+    [accid] => test1
+)
+
+response: 
+{"desc":"already register","code":414}
+
+[2015-11-05 15:41:13] header: 
+Array
+(
+    [0] => Appkey: 361c0953d08afc85040a36b48061daf4
+    [1] => Nonce: 2&kp*8!w9f0+%(4o6ge5
+    [2] => CurTime: 1446709273
+    [3] => CheckSum: f63db108d0ab486540a3882bd70cf3b970e374f6
+    [4] => content-type: application/x-www-form-urlencoded; charset=UTF-8
+)
+
+body: 
+Array
+(
+    [name] => me
+    [token] => 26c994df39ae4fc85c2b58312e9bf05d
+    [accid] => test-1446709273
+)
+
+response: 
+{"code":200,"info":{"token":"26c994df39ae4fc85c2b58312e9bf05d","accid":"test-1446709273","name":"me"}}
+
+[2015-11-05 15:42:46] header: 
+Array
+(
+    [0] => Appkey: 361c0953d08afc85040a36b48061daf4
+    [1] => Nonce: #nlpy^6r(+8o~kh%)$xa
+    [2] => CurTime: 1446709366
+    [3] => CheckSum: 95cb6ff02e530f6bc476309c9c263b815f628a6d
+    [4] => content-type: application/x-www-form-urlencoded; charset=UTF-8
+)
+
+body: 
+Array
+(
+    [name] => me
+    [token] => 25b4123af0e75f216fb180f213928a82
+    [accid] => test-1446709366
+)
+
+response: 
+{"code":200,"info":{"token":"25b4123af0e75f216fb180f213928a82","accid":"test-1446709366","name":"me"}}
+
+[2015-11-05 15:42:47] header: 
+Array
+(
+    [0] => Appkey: 361c0953d08afc85040a36b48061daf4
+    [1] => Nonce: ibr+*nt5e&q32u6xwsl(
+    [2] => CurTime: 1446709366
+    [3] => CheckSum: b21c8b2c4b4c6a7c8b3043c20a12c8548b99f74c
+    [4] => content-type: application/x-www-form-urlencoded; charset=UTF-8
+)
+
+body: 
+Array
+(
+    [accids] => ["test1"]
+    [accid] => test-1446709366
+)
+
+response: 
+{"code":200,"uinfos":[{"accid":"test1","name":"me","gender":0}]}
+
+[2015-11-05 15:44:05] header: 
+Array
+(
+    [0] => Appkey: 361c0953d08afc85040a36b48061daf4
+    [1] => Nonce: 498q6sil^a5&~roky3_c
+    [2] => CurTime: 1446709444
+    [3] => CheckSum: 888819a65ecb1a8110aee44e2067c7101ca54a33
+    [4] => content-type: application/x-www-form-urlencoded; charset=UTF-8
+)
+
+body: 
+Array
+(
+    [name] => me
+    [token] => ef204c3e15b9e027a23585f0e863813e
+    [accid] => test-1446709444
+)
+
+response: 
+{"code":200,"info":{"token":"ef204c3e15b9e027a23585f0e863813e","accid":"test-1446709444","name":"me"}}
+
+[2015-11-05 15:44:05] header: 
+Array
+(
+    [0] => Appkey: 361c0953d08afc85040a36b48061daf4
+    [1] => Nonce: oxek#8%&4!dyc$)mzgw7
+    [2] => CurTime: 1446709445
+    [3] => CheckSum: e71dfd2d6a93d2269d68d7702edf884815911a76
+    [4] => content-type: application/x-www-form-urlencoded; charset=UTF-8
+)
+
+body: 
+Array
+(
+    [accids] => ["test1","test-1446709366"]
+    [accid] => test-1446709444
+)
+
+response: 
+{"code":200,"uinfos":[{"accid":"test1","name":"me","gender":0},{"accid":"test-1446709366","name":"me","gender":0}]}
+
+[2015-11-05 16:14:40] header: 
+Array
+(
+    [0] => Appkey: 361c0953d08afc85040a36b48061daf4
+    [1] => Nonce: g#06%!&sb()3_~9hdcxf
+    [2] => CurTime: 1446711279
+    [3] => CheckSum: 7672553a342ede5c6bdefd48f2c2e69e94752178
+    [4] => content-type: application/x-www-form-urlencoded; charset=UTF-8
+)
+
+body: 
+Array
+(
+    [accid] => test-1446711279
+    [name] => me
+    [token] => 74c29656224d09baf7aefec0a3b61e63
+)
+
+response: 
+{"code":200,"info":{"token":"74c29656224d09baf7aefec0a3b61e63","accid":"test-1446711279","name":"me"}}
+
+[2015-11-05 16:14:40] header: 
+Array
+(
+    [0] => Appkey: 361c0953d08afc85040a36b48061daf4
+    [1] => Nonce: %agrm75~if2(qe_8vbuh
+    [2] => CurTime: 1446711280
+    [3] => CheckSum: 7cba0d23286260c4d450328ad045defbcb5163d1
+    [4] => content-type: application/x-www-form-urlencoded; charset=UTF-8
+)
+
+body: 
+Array
+(
+    [accids] => ["test1","test-1446709366"]
+)
+
+response: 
+{"code":200,"uinfos":[{"accid":"test1","name":"me","gender":0},{"accid":"test-1446709366","name":"me","gender":0}]}
+
+[2015-11-05 19:16:45] header: 
+Array
+(
+    [0] => Appkey: 361c0953d08afc85040a36b48061daf4
+    [1] => Nonce: ~$i4g71^%fjp3l9stqae
+    [2] => CurTime: 1446722205
+    [3] => CheckSum: 068fffb8725b8b7ad1d1ca274ea0e3b1a62dae1e
+    [4] => content-type: application/x-www-form-urlencoded; charset=UTF-8
+)
+
+body: 
+Array
+(
+    [accids] => ["20053140"]
+)
+
+response: 
+{"code":200,"uinfos":[{"accid":"20053140","name":"dzer","gender":0}]}
+
