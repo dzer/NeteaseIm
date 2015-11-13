@@ -121,7 +121,7 @@ class ImTeam extends Imbase {
             'tid', 'tname', 'owner', 'announcement',
             'intro', 'joinmode', 'custom'
         );
-        return $this->exec($this->url['remove'], $data);
+        return $this->exec($this->url['update'], $data);
     }
 
     /**
