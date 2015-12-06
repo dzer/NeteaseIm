@@ -2,20 +2,22 @@
 
 /**
  * 历史记录类
- * 包括单聊、群聊历史记录
+ * 包括单聊、群聊历史记录.
  * 
  * @author dx <358654744@qq.com>
  * @date 2015-11-05
+ *
  * @version 1.0
  */
-class ImHistory extends Imbase {
+class ImHistory extends Imbase
+{
     private $url = array(
         //单聊云端历史消息查询
         'querySessionMsg' => 'https://api.netease.im/nimserver/history/querySessionMsg.action',
         //群聊云端历史消息查询
-        'queryTeamMsg' => 'https://api.netease.im/nimserver/history/queryTeamMsg.action'
+        'queryTeamMsg' => 'https://api.netease.im/nimserver/history/queryTeamMsg.action',
     );
-    
+
     /**
      * 单聊云端历史消息查询
      * 请求参数说明：
@@ -27,16 +29,19 @@ class ImHistory extends Imbase {
      * reverse  1按时间正序排列，2按时间降序排列。
      * 
      * @param array $data
+     *
      * @return string
      */
-    public function querySessionMsg($data = array()) {
+    public function querySessionMsg($data = array())
+    {
         $this->params = array(
             'from', 'to', 'begintime',
-            'endtime', 'limit', 'reverse'
+            'endtime', 'limit', 'reverse',
         );
+
         return $this->exec($this->url['querySessionMsg'], $data);
     }
-    
+
     /**
      * 群聊云端历史消息查询
      * 请求参数说明：
@@ -48,14 +53,16 @@ class ImHistory extends Imbase {
      * reverse  1按时间正序排列，2按时间降序排列。
      * 
      * @param array $data
+     *
      * @return string
      */
-    public function queryTeamMsg($data = array()) {
+    public function queryTeamMsg($data = array())
+    {
         $this->params = array(
             'tid', 'accid', 'begintime',
-            'endtime', 'limit', 'reverse'
+            'endtime', 'limit', 'reverse',
         );
+
         return $this->exec($this->url['queryTeamMsg'], $data);
     }
 }
-

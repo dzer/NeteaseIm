@@ -2,14 +2,15 @@
 
 /**
  * 用户操作类
- * 包括创建id，更新用户信息，获取用户信息，删除用户，更新token，拉黑，解除黑名单，好友关系
+ * 包括创建id，更新用户信息，获取用户信息，删除用户，更新token，拉黑，解除黑名单，好友关系.
  * 
  * @author dx <358654744@qq.com>
  * @date 2015-11-05
+ *
  * @version 1.0
  */
-class ImUser extends Imbase {
-
+class ImUser extends Imbase
+{
     //请求url
     private $url = array(
         //创建云信id
@@ -40,53 +41,71 @@ class ImUser extends Imbase {
 
     /**
      * 创建云信ID
-     * 参数说明 name昵称，props属性（json），icon头像url，token
+     * 参数说明 name昵称，props属性（json），icon头像url，token.
+     *
      * @param type $data
+     *
      * @return string
      */
-    public function create($data = null) {
+    public function create($data = null)
+    {
         //参数
         $this->params = array('accid', 'name', 'props', 'icon', 'token');
+
         return $this->exec($this->url['create'], $data);
     }
 
     /**
      * 更新云信基本信息
-     * 参数说明 name昵称，props属性（json），token
+     * 参数说明 name昵称，props属性（json），token.
+     *
      * @param array $data
+     *
      * @return string
      */
-    public function update($data = null) {
+    public function update($data = null)
+    {
         $this->params = array('accid', 'name', 'props', 'token');
+
         return $this->exec($this->url['update'], $data);
     }
 
     /**
-     * 更新用户详细信息
+     * 更新用户详细信息.
+     *
      * @param array $data
+     *
      * @return string
      */
-    public function updateInfo($data = null) {
+    public function updateInfo($data = null)
+    {
         $this->params = array('accid', 'name', 'icon', 'sign', 'email', 'birth', 'mobile', 'gender', 'ex');
+
         return $this->exec($this->url['updateInfo'], $data);
     }
 
     /**
-     * 更新用户token并生成新token
+     * 更新用户token并生成新token.
+     *
      * @param string $accid
+     *
      * @return string
      */
-    public function refreshToken($accid = null) {
+    public function refreshToken($accid = null)
+    {
         return $this->execByPk($this->url['refreshToken'], $accid);
     }
 
     /**
      * 获取用户信息
-     * 可以批量获取，多人时以数组形式传入array(accid1,accid2)
+     * 可以批量获取，多人时以数组形式传入array(accid1,accid2).
+     *
      * @param void $ids
-     * @return string 
+     *
+     * @return string
      */
-    public function getinfos($ids = null) {
+    public function getinfos($ids = null)
+    {
         //参数
         $this->params = array('accids');
         $data = array();
@@ -95,24 +114,31 @@ class ImUser extends Imbase {
         } elseif (isset($this->data['accids'])) {
             $data['accids'] = is_array($this->data['accids']) ? json_encode($this->data['accids']) : json_encode(array($this->data['accids']));
         }
+
         return $this->exec($this->url['getinfos'], $data);
     }
 
     /**
-     * 封禁云信id
+     * 封禁云信id.
+     *
      * @param string $accid
+     *
      * @return string
      */
-    public function block($accid = null) {
+    public function block($accid = null)
+    {
         return $this->execByPk($this->url['block'], $accid);
     }
 
     /**
-     * 接禁云信id
+     * 接禁云信id.
+     *
      * @param string $accid
+     *
      * @return string
      */
-    public function unblock($accid = null) {
+    public function unblock($accid = null)
+    {
         return $this->execByPk($this->url['unblock'], $accid);
     }
 
@@ -121,12 +147,16 @@ class ImUser extends Imbase {
      * 参数说明：accid加好友发起者id,
      *          faccid加好友接受者id,
      *          type  1直接加好友，2请求加好友，3同意加好友，4拒绝加好友
-     *          msg 加好友请求消息
+     *          msg 加好友请求消息.
+     *
      * @param type $data
+     *
      * @return type
      */
-    public function addFriend($data = null) {
+    public function addFriend($data = null)
+    {
         $this->params = array('accid', 'faccid', 'type', 'msg');
+
         return $this->exec($this->url['addFriend'], $data);
     }
 
@@ -134,36 +164,48 @@ class ImUser extends Imbase {
      * 更新好友备注
      * 参数说明：accid发起者id,
      *          faccid要修改好友id,
-     *          alias  好友备注名
+     *          alias  好友备注名.
+     *
      * @param type $data
+     *
      * @return type
      */
-    public function updateFriendInfo($data = null) {
+    public function updateFriendInfo($data = null)
+    {
         $this->params = array('accid', 'faccid', 'alias');
+
         return $this->exec($this->url['updateFriendInfo'], $data);
     }
 
     /**
      * 删除好友关系
      * 参数说明：accid发起者id,
-     *          faccid要删除的好友id
+     *          faccid要删除的好友id.
+     *
      * @param type $data
+     *
      * @return type
      */
-    public function deleteFriend($data = null) {
+    public function deleteFriend($data = null)
+    {
         $this->params = array('accid', 'faccid');
+
         return $this->exec($this->url['deleteFriend'], $data);
     }
 
     /**
      * 查询某时间点起到现在有更新的双向好友
      * 参数说明：accid 发起者id,
-     *          createtime 查询时间戳
+     *          createtime 查询时间戳.
+     *
      * @param type $data
+     *
      * @return type
      */
-    public function getFriend($data = null) {
+    public function getFriend($data = null)
+    {
         $this->params = array('accid', 'createtime');
+
         return $this->exec($this->url['getFriend'], $data);
     }
 
@@ -172,13 +214,16 @@ class ImUser extends Imbase {
      * 参数说明：accid 用户id,
      *          targetAcc 被加黑或加静音的帐号
      *          relationType 1黑名单操作 2静音操作
-     *          value 0取消黑名单或取消静音 1加入黑名单或静音
+     *          value 0取消黑名单或取消静音 1加入黑名单或静音.
+     *
      * @param type $data
+     *
      * @return type
      */
-    public function setSpecialRelation($data = null) {
+    public function setSpecialRelation($data = null)
+    {
         $this->params = array('accid', 'targetAcc', 'relationType', 'value');
+
         return $this->exec($this->url['setSpecialRelation'], $data);
     }
-
 }
