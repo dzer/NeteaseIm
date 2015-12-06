@@ -17,7 +17,8 @@ class ImAutoloader
      * 
      * @return bool
      */
-    public static function register() {
+    public static function register()
+    {
         if (function_exists('__autoload')) {
             spl_autoload_register('__autoload');
         }
@@ -31,6 +32,7 @@ class ImAutoloader
         foreach ($functions as $function) {
             $x = spl_autoload_register($function);
         }
+
         return $x;
     }
 
